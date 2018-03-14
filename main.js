@@ -64,3 +64,23 @@ var profiles = [
     }
 ];
 
+//Merch Cards
+
+function printToDom(stringToPrint, divId)
+{
+    var divElement = document.getElementById(divId);
+    divElement.innerHTML = stringToPrint;
+
+}
+
+function domStringMaker(merchArray)
+{
+    var merchString = ""
+        for (var idx = 0; idx < merchArray.length; idx++)
+    {
+      merchString += "<div>" + merchPhotos[idx] + "<div>";
+    }
+    printToDom(merchString, "merchandise");   
+}
+
+domStringMaker(merchPhotos);
