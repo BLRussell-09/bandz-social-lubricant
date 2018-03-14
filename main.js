@@ -33,3 +33,11 @@ var profiles = [
         FavFood: 'Beans'
     }
 ];
+
+var albumPhotos = [
+    '',
+    '',
+    '',
+    '',
+    '',
+];
