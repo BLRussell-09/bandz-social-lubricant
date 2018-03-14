@@ -69,5 +69,5 @@ var albumPhotos = [
     'http://www.designformusic.com/wp-content/uploads/2017/07/hout-sauce-soundcheck-samples-500x500.jpg',
     'https://f4.bcbits.com/img/a2756769813_10.jpg',
     'https://images-na.ssl-images-amazon.com/images/I/91h8YsLwNtL._SY355_.jpg',
-    'http://pinktentacle.com/images/s_nagaoka_23_large.jpg',
+    'http://pinktentacle.com/images/s_nagaoka_23_large.jpg'
 ];
