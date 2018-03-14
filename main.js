@@ -64,6 +64,27 @@ var profiles = [
     }
 ];
 
+//Merch Cards
+
+function printToDom(stringToPrint, divId)
+{
+    var divElement = document.getElementById(divId);
+    divElement.innerHTML += stringToPrint;
+
+}
+
+function domStringMaker(merchArray)
+{
+    var merchString = ""
+        for (var idx = 0; idx < merchArray.length; idx++)
+    {
+      merchString += "<div>" + "<img src='" + merchPhotos[idx] + "'>" + "<div>";
+    }
+    printToDom(merchString, "merchandise");   
+}
+
+domStringMaker(merchPhotos);
+
 var albumPhotos = [
     'http://deow9bq0xqvbj.cloudfront.net/image-logo/1379207/logo-v1.png',
     'http://www.designformusic.com/wp-content/uploads/2017/07/hout-sauce-soundcheck-samples-500x500.jpg',
@@ -71,3 +92,4 @@ var albumPhotos = [
     'https://images-na.ssl-images-amazon.com/images/I/91h8YsLwNtL._SY355_.jpg',
     'http://pinktentacle.com/images/s_nagaoka_23_large.jpg'
 ];
+
