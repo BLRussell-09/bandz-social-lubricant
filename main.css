@@ -4,8 +4,10 @@ body {
 }
 
 .nav {
-  background-color: saddlebrown;
+  background-color: slategrey;
+  border-bottom: 1px solid black;
 }
+
 .nav ul {
   list-style: none;
   text-align: center;
@@ -16,15 +18,14 @@ body {
 .nav li {
   line-height: 40px;
   height: 40px;
-  background-color: slategray;
-  border-bottom: 1px solid black;
-  float: left;
-  width: 341.5px;
+  /* background-color: slategray; */
+  display: inline-block;
+  width: 24%;
 
 }
 
 .nav a {
   text-decoration: none;
   display: inline-block;
-  padding: 8px;
 }
+
