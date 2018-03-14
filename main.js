@@ -6,3 +6,30 @@ var merchPhotos = [
     'https://i.pinimg.com/736x/89/68/fc/8968fcb6d31e1a02c4912d9cb49ff697--ex-boyfriend-awesome-shirts.jpg', 
     'https://pbs.twimg.com/media/DTIjwL-U0AAl4K0.jpg'
 ];
+
+var profiles = [
+    {
+        Name: 'Drake',
+        Instrument: 'Guitar',
+        Hobby: 'Eat', 
+        FavFood: 'Hamburger'
+    },
+    {
+        Name: 'Barry',
+        Instrument: 'Flute',
+        Hobby: 'Sing', 
+        FavFood: 'Pizza'
+    },
+    {
+        Name: 'Juno',
+        Instrument: 'Drums',
+        Hobby: 'Running', 
+        FavFood: 'Ham'
+    },
+    {
+        Name: 'Corey',
+        Instrument: 'Violin',
+        Hobby: 'Protest', 
+        FavFood: 'Beans'
+    }
+];
