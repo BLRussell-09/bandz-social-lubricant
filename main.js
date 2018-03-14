@@ -78,7 +78,7 @@ function domStringMaker(merchArray)
     var merchString = ""
         for (var idx = 0; idx < merchArray.length; idx++)
     {
-      merchString += "<div>" + merchPhotos[idx] + "<div>";
+      merchString += "<div>" + "<img src='" + merchPhotos[idx] + "'>" + "<div>";
     }
     printToDom(merchString, "merchandise");   
 }
