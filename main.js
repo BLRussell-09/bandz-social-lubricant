@@ -69,7 +69,7 @@ var profiles = [
 function printToDom(stringToPrint, divId)
 {
     var divElement = document.getElementById(divId);
-    divElement.innerHTML = stringToPrint;
+    divElement.innerHTML += stringToPrint;
 
 }
 
