@@ -45,3 +45,23 @@ body {
 #albumCards img{
   width: 100%;
 }
+
+/* individual album page styles------------------------------------------------ */
+
+#album1, #album2, #album3, #album4, #album5 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#album1 div, #album2 div, #album3 div, #album4 div, #album5 div {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  text-align: center;
+  width: 100%;
+}
+
+#album1 p, #album2 p, #album3 p, #album4 p, #album5 p {
+  width: 40%;
+} 
