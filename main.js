@@ -64,7 +64,6 @@ var profiles = [
     }
 ];
 
-//Merch Cards
 
 function printToDom(stringToPrint, divId)
 {
@@ -93,3 +92,12 @@ var albumPhotos = [
     'http://pinktentacle.com/images/s_nagaoka_23_large.jpg'
 ];
 
+//Merch Cards
+function alertMe(){
+  if(document.getElementById("merchandise")){
+    alert("I'm sorry, that item is out of stock at the moment.");
+  }
+}
+
+var merch = document.getElementById("merchandise");
+merch.addEventListener("click", alertMe);
