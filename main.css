@@ -67,7 +67,14 @@ body {
 
 #album1 p, #album2 p, #album3 p, #album4 p, #album5 p {
   width: 40%;
-} 
+  color: rgb(179, 170, 170);
+  background-color: rgba(38, 41, 44, 0.708);
+}
+
+#album1 a, #album2 a, #album3 a, #album4 a, #album5 a {
+  color: rgb(179, 170, 170);
+  background-color: rgba(38, 41, 44, 0.708);
+}
 
 /* Home Page */
 #group-photo img {
