@@ -129,6 +129,25 @@ if (document.getElementById('albumCards')) {
 
 // Album Songs -----------------------------------------
 
-function albumSongBuilder(albumArray) {
+function albumSongBuilder(albumArray, albumIndex, albumDiv) {
     var domString = '';
+    domString += '<div>';
+    for (var i = 0; i < albumArray[albumIndex].songList.length; i++) {
+        domString += '<p>' + albumArray[albumIndex].songList[i] + '<span> ' + albumArray[albumIndex].songDuration[i] + ' </span></p>';
+    }
+    domString += '<a href="/files/albums.html">Album Page</a>';
+    domString += '</div>';
+    printToDom(domString, albumDiv);
+}
+
+if (document.getElementById('album1')) {
+    albumSongBuilder(Albums, 0, 'album1');
+} else if (document.getElementById('album2')) {
+    albumSongBuilder(Albums, 1, 'album2');
+} else if (document.getElementById('album3')) {
+    albumSongBuilder(Albums, 2, 'album3');
+} else if (document.getElementById('album4')) {
+    albumSongBuilder(Albums, 3, 'album4');
+} else if (document.getElementById('album5')) {
+    albumSongBuilder(Albums, 4, 'album5');
 }
