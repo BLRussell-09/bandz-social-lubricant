@@ -107,6 +107,15 @@ if (document.getElementById('merchandise')) {
     domStringMaker(merchPhotos);
 }
 
+function alertMe(){
+    if(document.getElementById("merchandise")){
+      alert("I'm sorry, that item is out of stock at the moment.");
+    }
+  }
+  
+  var merch = document.getElementById("merchandise");
+  merch.addEventListener("click", alertMe);
+
 // Album Cards -----------------------------------------
 
 function albumCardBuilder(albumArray, coverArray) {
