@@ -131,10 +131,11 @@ function albumSongBuilder(albumArray, albumIndex, albumDiv) {
     var domString = '';
     domString += '<div>';
     for (var i = 0; i < albumArray[albumIndex].songList.length; i++) {
-        domString += '<p>' + albumArray[albumIndex].songList[i] + '<span> ' + albumArray[albumIndex].songDuration[i] + ' </span></p>';
+        domString += '<p>' + albumArray[albumIndex].songList[i] + '</p>';
+        domString += '<p>' + albumArray[albumIndex].songDuration[i] + '</p>';
     }
-    domString += '<a href="/files/albums.html">Album Page</a>';
     domString += '</div>';
+    domString += '<a href="/files/albums.html">Album Page</a>';
     printToDom(domString, albumDiv);
 }
 
