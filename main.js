@@ -1,4 +1,4 @@
-
+// DATA --------------------------------------------
 var Albums = 
 [
   {
@@ -64,6 +64,16 @@ var profiles = [
     }
 ];
 
+var albumPhotos = [
+    'http://deow9bq0xqvbj.cloudfront.net/image-logo/1379207/logo-v1.png',
+    'http://www.designformusic.com/wp-content/uploads/2017/07/hout-sauce-soundcheck-samples-500x500.jpg',
+    'https://f4.bcbits.com/img/a2756769813_10.jpg',
+    'https://images-na.ssl-images-amazon.com/images/I/91h8YsLwNtL._SY355_.jpg',
+    'http://pinktentacle.com/images/s_nagaoka_23_large.jpg'
+];
+
+// End of DATA
+
 //Merch Cards
 
 function printToDom(stringToPrint, divId)
@@ -82,14 +92,23 @@ function domStringMaker(merchArray)
     }
     printToDom(merchString, "merchandise");   
 }
+if (document.getElementById('merchandise')) {
+    domStringMaker(merchPhotos);
+}
 
-domStringMaker(merchPhotos);
 
-var albumPhotos = [
-    'http://deow9bq0xqvbj.cloudfront.net/image-logo/1379207/logo-v1.png',
-    'http://www.designformusic.com/wp-content/uploads/2017/07/hout-sauce-soundcheck-samples-500x500.jpg',
-    'https://f4.bcbits.com/img/a2756769813_10.jpg',
-    'https://images-na.ssl-images-amazon.com/images/I/91h8YsLwNtL._SY355_.jpg',
-    'http://pinktentacle.com/images/s_nagaoka_23_large.jpg'
-];
 
+// Album Cards -----------------------------------------
+
+function albumCardBuilder(albumArray, coverArray) {
+    var domString = '';
+    albumArray.forEach(function(e) {
+        domString += '<article>';
+        domString += '<img src="' + coverArray[e] + '">';
+        domString += '<h3>' + e.albumName + '</h3>';
+        domString += '</article>';
+    });
+    printToDom(domString, 'albumCards');
+}
+
+albumCardBuilder(Albums, albumPhotos);
