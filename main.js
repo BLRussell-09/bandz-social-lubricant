@@ -107,8 +107,6 @@ if (document.getElementById('merchandise')) {
     domStringMaker(merchPhotos);
 }
 
-
-
 // Album Cards -----------------------------------------
 
 function albumCardBuilder(albumArray, coverArray) {
