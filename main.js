@@ -113,8 +113,10 @@ function alertMe(){
     }
   }
   
-  var merch = document.getElementById("merchandise");
-  merch.addEventListener("click", alertMe);
+  if (document.getElementById("merchandise")) {
+    var merch = document.getElementById("merchandise");
+    merch.addEventListener("click", alertMe);
+  }
 
 // Album Cards -----------------------------------------
 
