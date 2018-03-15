@@ -4,27 +4,37 @@ var Albums =
   {
     albumName: "Slip n Slide",
     songList: ["Water or Silicon?", "It Puts The Lube On It's Skin", "Lubed Up And Let Down", "Emergency Lube", "Paula Dean's Butter Stash"],
-    songDuration: ["2:34", "3:45", "4:56", "5:67", "3:56"]
+    songDuration: ["2:34", "3:45", "4:56", "5:67", "3:56"],
+    filePath: '/files/album1.html',
+    divId: 'album1'
   },
   {
     albumName: "Living the Lube Life",
     songList: ["Lube 24/7", "Dinosaur Friendly", "Not For Consumption", "Mr. Rogers Secret", "Rehydrated Raisins"],
-    songDuration: ["2:50", "3:35", "4:10", "5:57", "3:56"]
+    songDuration: ["2:50", "3:35", "4:10", "5:57", "3:56"],
+    filePath: '/files/album2.html',
+    divId: 'album2'
   },
   {
     albumName: "Slip n Slide the II",
     songList: ["Gimme More", "Your Grandma Is My Best Friend", "Smells Like Lube", "Lube Is Love, Lube is Life", "Lube Cellar"],
-    songDuration: ["2:37", "3:33", "4:16", "5:11", "3:40"]
+    songDuration: ["2:37", "3:33", "4:16", "5:11", "3:40"],
+    filePath: '/files/album3.html',
+    divId: 'album3'
   },
   {
     albumName: "Confessions of a Lube Bottle",
     songList: ["The Things I've Seen", "The Things I've Done", "The Places I've Been", "Keep Refrigerated", "Not Jello"],
-    songDuration: ["7:54", "5:42", "1:23", "6:46", "3:34"]
+    songDuration: ["7:54", "5:42", "1:23", "6:46", "3:34"],
+    filePath: '/files/album4.html',
+    divId: 'album4'
   },
   {
     albumName: "The Final Bottle",
     songList: ["Fond Memories", "Lube Legacy", "Socially Awkward", "Puddle Of Lube", "Last Drop Of the Bottle"],
-    songDuration: ["2:47", "3:38", "4:29", "5:18", "3:37"]
+    songDuration: ["2:47", "3:38", "4:29", "5:18", "3:37"],
+    filePath: '/files/album5.html',
+    divId: 'album5'
   }
 ];
 
@@ -72,16 +82,17 @@ var albumPhotos = [
     'http://pinktentacle.com/images/s_nagaoka_23_large.jpg'
 ];
 
-// End of DATA
+// End of DATA ---------------------------------------
 
-//Merch Cards
-
+// printToDom function--------------------------------
 function printToDom(stringToPrint, divId)
 {
     var divElement = document.getElementById(divId);
     divElement.innerHTML += stringToPrint;
 
 }
+
+//Merch Cards
 
 function domStringMaker(merchArray)
 {
@@ -104,8 +115,8 @@ function albumCardBuilder(albumArray, coverArray) {
     var domString = '';
     for (var i = 0; i < albumArray.length; i++) {
         domString += '<article>';
-        domString += '<img src="' + coverArray[i] + '">';
-        domString += '<h3>' + albumArray[i].albumName + '</h3>';
+        domString += '<a href="' + albumArray[i].filePath + '"><img src="' + coverArray[i] + '"></a>';
+        domString += '<a href="' + albumArray[i].filePath + '"><h3>' + albumArray[i].albumName + '</h3></a>';
         domString += '</article>';
     }
 
@@ -114,4 +125,10 @@ function albumCardBuilder(albumArray, coverArray) {
 
 if (document.getElementById('albumCards')) {
     albumCardBuilder(Albums, albumPhotos);
+}
+
+// Album Songs -----------------------------------------
+
+function albumSongBuilder(albumArray) {
+    var domString = '';
 }
