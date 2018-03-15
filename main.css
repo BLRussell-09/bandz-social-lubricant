@@ -1,8 +1,11 @@
 body {
+  background-color: rgb(38, 41, 44);
   margin: 0;
   padding: 0;
+  background-image: url(http://globalmedicalco.com/photos/globalmedicalco/2/8604.jpg);
 }
 
+/*Navbar style */
 .nav {
   background-color: slategrey;
   border-bottom: 1px solid black;
@@ -27,5 +30,23 @@ body {
 .nav a {
   text-decoration: none;
   display: inline-block;
+}
+
+/* Home Page */
+#group-photo img {
+  display: block;
+  margin: 0 auto;
+}
+
+#historyText {
+  height: 12em;
+  width: 50%;
+  text-align: center;
+  padding: 0;
+  margin-top: 1em;
+  margin-left: 21em;
+  overflow: auto;
+  color: rgb(179, 170, 170);
+  background-color: rgba(38, 41, 44, 0.708);
 }
 
