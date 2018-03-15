@@ -102,13 +102,16 @@ if (document.getElementById('merchandise')) {
 
 function albumCardBuilder(albumArray, coverArray) {
     var domString = '';
-    albumArray.forEach(function(e) {
+    for (var i = 0; i < albumArray.length; i++) {
         domString += '<article>';
-        domString += '<img src="' + coverArray[e] + '">';
-        domString += '<h3>' + e.albumName + '</h3>';
+        domString += '<img src="' + coverArray[i] + '">';
+        domString += '<h3>' + albumArray[i].albumName + '</h3>';
         domString += '</article>';
-    });
+    }
+
     printToDom(domString, 'albumCards');
 }
 
-albumCardBuilder(Albums, albumPhotos);
+if (document.getElementById('albumCards')) {
+    albumCardBuilder(Albums, albumPhotos);
+}
