@@ -64,6 +64,8 @@ var profiles = [
     }
 ];
 
+
+
 //Merch Cards
 
 function printToDom(stringToPrint, divId)
@@ -84,6 +86,8 @@ function domStringMaker(merchArray)
 }
 
 domStringMaker(merchPhotos);
+
+
 
 var albumPhotos = [
     'http://deow9bq0xqvbj.cloudfront.net/image-logo/1379207/logo-v1.png',
