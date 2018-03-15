@@ -29,3 +29,19 @@ body {
   display: inline-block;
 }
 
+/* album page styles -----------------------------------------------------*/
+
+#albumCards {
+  display: flex;
+  flex-flow: row wrap;
+  height: 50em;
+  justify-content: space-evenly;
+}
+
+#albumCards article {
+  width: 40%;
+}
+
+#albumCards img{
+  width: 100%;
+}
