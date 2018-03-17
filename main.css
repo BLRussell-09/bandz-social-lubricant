@@ -31,8 +31,13 @@ body {
 .nav a {
   text-decoration: none;
   display: inline-block;
+  color: rgb(190, 35, 48);
 }
 
+.nav a:visited {
+  color: firebrick;
+}
+/*                             */
 
 #member-info-container {
   position: relative;
