@@ -4,7 +4,7 @@ body {
   padding: 0;
   background-image: url(http://globalmedicalco.com/photos/globalmedicalco/2/8604.jpg);
   position: relative;
-  height: 100vh;
+  height: 100%;
 }
 
 /*Navbar style */
@@ -184,7 +184,7 @@ div.merchCard img {
   padding: 0;
   margin-top: 1em;
   margin-left: 21em;
-  margin-bottom: 5em;
+  margin-bottom: 8em;
   overflow: auto;
   color: rgb(179, 170, 170);
   background-color: rgba(38, 41, 44, 0.708);
@@ -200,6 +200,7 @@ audio {
 
 footer {
   position: absolute;
+  bottom:0;
   right: 0;
   left: 0;
   bottom: 0px;
@@ -207,6 +208,14 @@ footer {
   padding: 1em;
   color: rgb(179, 170, 170);
   background-color: rgba(38, 41, 44, 0.708);
+}
+
+#merchandise {
+  padding-bottom: 42em;
+}
+
+#albumCards {
+  padding-bottom: 3em;
 }
 
 footer p {
@@ -296,4 +305,8 @@ footer p {
   top: 10px;
   font-size: 1.3em;
   cursor: pointer;
+
+/* Hidden audio */
+audio { 
+  display:none;
 }
