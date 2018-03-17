@@ -74,6 +74,9 @@ var profiles = [
     }
 ];
 
+
+
+//Merch Cards
 var albumPhotos = [
     'http://deow9bq0xqvbj.cloudfront.net/image-logo/1379207/logo-v1.png',
     'http://www.designformusic.com/wp-content/uploads/2017/07/hout-sauce-soundcheck-samples-500x500.jpg',
@@ -120,6 +123,7 @@ function alertMe(){
 
 // Album Cards -----------------------------------------
 
+
 function albumCardBuilder(albumArray, coverArray) {
     var domString = '';
     for (var i = 0; i < albumArray.length; i++) {
@@ -131,6 +135,7 @@ function albumCardBuilder(albumArray, coverArray) {
 
     printToDom(domString, 'albumCards');
 }
+
 
 if (document.getElementById('albumCards')) {
     albumCardBuilder(Albums, albumPhotos);
@@ -161,3 +166,116 @@ if (document.getElementById('album1')) {
 } else if (document.getElementById('album5')) {
     albumSongBuilder(Albums, 4, 'album5');
 }
+
+
+//---------------------- Member Profile ------------------------------
+
+
+var n1 = profiles[0];
+var n2 = profiles[1];
+var n3 = profiles[2];
+var n4 = profiles[3];
+
+var test1 = document.getElementById("profile-1p");
+var test2 = document.getElementById("profile-2p");
+var test3 = document.getElementById("profile-3p");
+var test4 = document.getElementById("profile-4p");
+
+var clearString = document.getElementById("member-info");
+
+function clearBox(elementID) {
+    document.getElementById(elementID).innerHTML = "";
+}
+ 
+
+function writetest() {
+    var strang = "";
+    strang += "<div class='profile-card'>";
+    strang += "<h1>" + "name: "+ n1.Name + "</h1>";
+    strang += "<h3>" + "instrument: " + n1.Instrument + "</h3>"
+    strang += "<h3>" + "hobby: " + n1.Hobby + "</h3>"
+    strang += "<h3>" + "favorite food: " + n1.FavFood + "</h3>"
+    strang += "</div>";
+    printToDom(strang, 'member-info');
+}
+
+function writetest2() {
+    var strang = "";
+    strang += "<div class='profile-card'>";
+    strang += "<h1>" + "name: " + n2.Name + "</h1>";
+    strang += "<h3>" + "instrument: " + n2.Instrument + "</h3>"
+    strang += "<h3>" + "hobby: " + n2.Hobby + "</h3>"
+    strang += "<h3>" + "favorite food: " + n2.FavFood + "</h3>"
+    strang += "</div>";
+    printToDom(strang, 'member-info');
+}
+
+function writetest3() {
+    var strang = "";
+    strang += "<div class='profile-card'>";
+    strang += "<h1>" + "name: " + n3.Name + "</h1>";
+    strang += "<h3>" + "instrument: " + n3.Instrument + "</h3>"
+    strang += "<h3>" + "hobby: " + n3.Hobby + "</h3>"
+    strang += "<h3>" + "favorite food: " + n3.FavFood + "</h3>"
+    strang += "</div>";
+    printToDom(strang, 'member-info');
+}
+
+function writetest4() {
+    var strang = "";
+    strang += "<div class='profile-card'>";
+    strang += "<h1>" + "name: " +  n4.Name + "</h1>";
+    strang += "<h3>" + "instrument: " + n4.Instrument + "</h3>"
+    strang += "<h3>" + "hobby: " + n4.Hobby + "</h3>"
+    strang += "<h3>" + "favorite food: " + n4.FavFood + "</h3>"
+    strang += "</div>";
+    printToDom(strang, 'member-info');
+}
+
+test1.addEventListener("click", function(){
+  if (test1) { 
+    test2.style.opacity = ".3";
+    test3.style.opacity = ".3";
+    test4.style.opacity = ".3";
+    test1.style.opacity = "1";
+    clearBox("member-info"); 
+    writetest();
+  }
+});
+
+test2.addEventListener("click", function () {
+    if (test2) {
+        test1.style.opacity = ".3";
+        test3.style.opacity = ".3";
+        test4.style.opacity = ".3";
+        test2.style.opacity = "1";
+        clearBox("member-info"); 
+        writetest2();
+    }
+});
+
+test3.addEventListener("click", function () {
+    if (test3) {
+        test1.style.opacity = ".3";
+        test2.style.opacity = ".3";
+        test4.style.opacity = ".3";
+        test3.style.opacity = "1";
+        clearBox("member-info");
+        writetest3();
+    }
+});
+
+test4.addEventListener("click", function () {
+    if (test4) {
+        test1.style.opacity = ".3";
+        test2.style.opacity = ".3";
+        test3.style.opacity = ".3";
+        test4.style.opacity = "1";
+        clearBox("member-info");
+        writetest4();
+    }
+});
+
+
+
+
