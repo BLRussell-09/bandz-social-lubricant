@@ -7,6 +7,10 @@ body {
   height: 100vh;
 }
 
+h1 {
+  text-align: center;
+  color: rgb(179, 170, 170); 
+}
 /*Navbar style */
 .nav {
   background-color: slategrey;
@@ -175,16 +179,19 @@ div.merchCard img {
 #group-photo img {
   display: block;
   margin: 0 auto;
+  padding-top: 4em;
+  border-radius: 6px;
 }
 
 #historyText {
   height: 12em;
   width: 50%;
-  text-align: center;
+  /* text-align: center; */
   padding: 0;
-  margin-top: 1em;
+  /* margin-top: 1em;
   margin-left: 21em;
-  margin-bottom: 5em;
+  margin-bottom: 5em; */
+  margin: 0 auto;
   overflow: auto;
   color: rgb(179, 170, 170);
   background-color: rgba(38, 41, 44, 0.708);
@@ -205,7 +212,8 @@ footer {
 /* Hidden audio */
 audio { 
   display:none;
-
+}
+/* footer */
 
 footer p {
   clear: both;
