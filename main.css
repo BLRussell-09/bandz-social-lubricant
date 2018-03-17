@@ -190,6 +190,12 @@ div.merchCard img {
   background-color: rgba(38, 41, 44, 0.708);
 }
 
+/* Hidden audio */
+audio { 
+  display:none;
+
+}
+
 /* Footer ---------------------------------------------*/
 
 footer {
@@ -202,11 +208,6 @@ footer {
   color: rgb(179, 170, 170);
   background-color: rgba(38, 41, 44, 0.708);
 }
-
-/* Hidden audio */
-audio { 
-  display:none;
-
 
 footer p {
   clear: both;

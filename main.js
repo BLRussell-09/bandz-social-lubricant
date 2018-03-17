@@ -133,7 +133,7 @@ function albumCardBuilder(albumArray, coverArray) {
     var domString = '';
     for (var i = 0; i < albumArray.length; i++) {
         domString += '<article>';
-        domString += '<a href="' + albumArray[i].filePath + '"><img src="' + coverArray[i] + '"></a>';
+        domString += '<img src="' + coverArray[i] + '">';
         domString += '<button id="' + albumArray[i].btnNumber +  '">' + albumArray[i].albumName + '</button>';
         domString += '</article>';
     }
