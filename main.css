@@ -29,3 +29,29 @@ body {
   display: inline-block;
 }
 
+#member-info-container {
+  position: relative;
+  right: -500px;
+  bottom: 590px;
+  font-family: 'Metal Mania', cursive;
+  font-size: 220%;
+  
+}
+
+#profile-container {
+  margin: 30px;
+
+}
+
+.profile-card {
+  border-style: solid;
+  color:black;
+  margin: -3%;
+  padding: 3%;
+  width: 400px;
+  height: 400px;
+  background-color: rgb(238, 28, 28);
+}
+
+
+
