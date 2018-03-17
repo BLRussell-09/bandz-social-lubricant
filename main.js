@@ -6,35 +6,40 @@ var Albums =
     songList: ["Water or Silicon?", "It Puts The Lube On It's Skin", "Lubed Up And Let Down", "Emergency Lube", "Paula Dean's Butter Stash"],
     songDuration: ["2:34", "3:45", "4:56", "5:67", "3:56"],
     filePath: '/files/album1.html',
-    divId: 'album1'
+    divId: 'album1',
+    btnNumber: 'btn1'
   },
   {
     albumName: "Living the Lube Life",
     songList: ["Lube 24/7", "Dinosaur Friendly", "Not For Consumption", "Mr. Rogers Secret", "Rehydrated Raisins"],
     songDuration: ["2:50", "3:35", "4:10", "5:57", "3:56"],
     filePath: '/files/album2.html',
-    divId: 'album2'
+    divId: 'album2',
+    btnNumber: 'btn2'
   },
   {
     albumName: "Slip n Slide the II",
     songList: ["Gimme More", "Your Grandma Is My Best Friend", "Smells Like Lube", "Lube Is Love, Lube is Life", "Lube Cellar"],
     songDuration: ["2:37", "3:33", "4:16", "5:11", "3:40"],
     filePath: '/files/album3.html',
-    divId: 'album3'
+    divId: 'album3',
+    btnNumber: 'btn3'
   },
   {
     albumName: "Confessions of a Lube Bottle",
     songList: ["The Things I've Seen", "The Things I've Done", "The Places I've Been", "Keep Refrigerated", "Not Jello"],
     songDuration: ["7:54", "5:42", "1:23", "6:46", "3:34"],
     filePath: '/files/album4.html',
-    divId: 'album4'
+    divId: 'album4',
+    btnNumber: 'btn4'
   },
   {
     albumName: "The Final Bottle",
     songList: ["Fond Memories", "Lube Legacy", "Socially Awkward", "Puddle Of Lube", "Last Drop Of the Bottle"],
     songDuration: ["2:47", "3:38", "4:29", "5:18", "3:37"],
     filePath: '/files/album5.html',
-    divId: 'album5'
+    divId: 'album5',
+    btnNumber: 'btn5'
   }
 ];
 
@@ -130,6 +135,7 @@ function albumCardBuilder(albumArray, coverArray) {
         domString += '<article>';
         domString += '<a href="' + albumArray[i].filePath + '"><img src="' + coverArray[i] + '"></a>';
         domString += '<a href="' + albumArray[i].filePath + '"><h3>' + albumArray[i].albumName + '</h3></a>';
+        domString += '<button id="' + albumArray[i].btnNumber +  '">Click Here to see Songs</button>';
         domString += '</article>';
     }
 
@@ -232,51 +238,173 @@ function writetest4() {
     printToDom(strang, 'member-info');
 }
 
-test1.addEventListener("click", function(){
-  if (test1) { 
-    test2.style.opacity = ".3";
-    test3.style.opacity = ".3";
-    test4.style.opacity = ".3";
-    test1.style.opacity = "1";
-    clearBox("member-info"); 
-    writetest();
-  }
-});
+if (test1 || test2 || test3 || test4) {
+    test1.addEventListener("click", function(){
+        if (test1) { 
+          test2.style.opacity = ".3";
+          test3.style.opacity = ".3";
+          test4.style.opacity = ".3";
+          test1.style.opacity = "1";
+          clearBox("member-info"); 
+          writetest();
+        }
+      });
+      
+      test2.addEventListener("click", function () {
+          if (test2) {
+              test1.style.opacity = ".3";
+              test3.style.opacity = ".3";
+              test4.style.opacity = ".3";
+              test2.style.opacity = "1";
+              clearBox("member-info"); 
+              writetest2();
+          }
+      });
+      
+      test3.addEventListener("click", function () {
+          if (test3) {
+              test1.style.opacity = ".3";
+              test2.style.opacity = ".3";
+              test4.style.opacity = ".3";
+              test3.style.opacity = "1";
+              clearBox("member-info");
+              writetest3();
+          }
+      });
+      
+      test4.addEventListener("click", function () {
+          if (test4) {
+              test1.style.opacity = ".3";
+              test2.style.opacity = ".3";
+              test3.style.opacity = ".3";
+              test4.style.opacity = "1";
+              clearBox("member-info");
+              writetest4();
+          }
+      });
+}
 
-test2.addEventListener("click", function () {
-    if (test2) {
-        test1.style.opacity = ".3";
-        test3.style.opacity = ".3";
-        test4.style.opacity = ".3";
-        test2.style.opacity = "1";
-        clearBox("member-info"); 
-        writetest2();
+// modal stuff ---------------------------------------------------------
+
+var Modal = function(child, strictClose) {
+    this.child = child;
+    this.portal = false;
+
+    //strictClose can be passed in as true to enforce
+        //only close on clicking 'X' ** Must have font awesome or change
+        //closeModal.className in render method to other svg font icon class
+    this.strictClose = strictClose;
+};
+
+
+Modal.prototype.show = function() {
+    if (!this.portal) {
+        this.portal = document.createElement('div');
+        this.portal.className = 'modal fade';
+        var backdrop = document.createElement('div');
+            backdrop.className = 'modal-backdrop';
+            backdrop.addEventListener('click', this.hide.bind(this));
+        this.portal.appendChild(backdrop);
+        document.body.insertBefore(this.portal, document.body.children[0]);
+        this.render();
     }
-});
+};
 
-test3.addEventListener("click", function () {
-    if (test3) {
-        test1.style.opacity = ".3";
-        test2.style.opacity = ".3";
-        test4.style.opacity = ".3";
-        test3.style.opacity = "1";
-        clearBox("member-info");
-        writetest3();
+
+Modal.prototype.render = function() {
+    if (this.portal) {
+        setTimeout(function() {
+            this.portal.classList.add('in');
+        }.bind(this), 10);
+        var inner = document.createElement('div');
+            inner.className = 'modal-inner';
+        var closeModal = document.createElement('div');
+            closeModal.id = 'close-modal';
+            closeModal.className = 'fa fa-times';
+        inner.appendChild(closeModal);
+        inner.appendChild(this.child);
+        this.portal.children[0].appendChild(inner);
     }
-});
+};
 
-test4.addEventListener("click", function () {
-    if (test4) {
-        test1.style.opacity = ".3";
-        test2.style.opacity = ".3";
-        test3.style.opacity = ".3";
-        test4.style.opacity = "1";
-        clearBox("member-info");
-        writetest4();
+Modal.prototype.settleOnMount = function() {
+    if (this.portal) {
+        this.portal.classList.add('in');
     }
-});
+};
 
+Modal.prototype.hide = function(e) {
+    if (e.target.className === 'modal-backdrop' && !this.strictClose) {
+        this.unmount();
+    }
+    if (e.target.id === 'close-modal') {
+        this.unmount();
+    }
+};
 
-// modal stuff --------------------------------------
+Modal.prototype.unmount = function() {
+    if (this.portal) {
+        document.body.removeChild(this.portal);
+        this.portal = false;
+    }
+};
 
-var modal = new VanillaModal();
+// Change Modal stuff here ---------------------------------------------------------
+
+(function() {
+
+    var btn = document.getElementById('btn1');
+        btn.addEventListener('click', function() {
+            openModalWindow('album1');
+        });
+        btn.addEventListener('click', function(e) {
+            albumSongBuilder(Albums, 0, 'album1');
+        });
+
+    var btn2 = document.getElementById('btn2');
+        btn2.addEventListener('click', function() {
+            openModalWindow('album2');
+        });
+        btn2.addEventListener('click', function(e) {
+            albumSongBuilder(Albums, 1, 'album2');
+        });
+
+    var btn3 = document.getElementById('btn3');
+        btn3.addEventListener('click', function() {
+            openModalWindow('album3');
+        });
+        btn3.addEventListener('click', function(e) {
+            albumSongBuilder(Albums, 2, 'album3');
+        });
+
+    var btn4 = document.getElementById('btn4');
+        btn4.addEventListener('click', function() {
+            openModalWindow('album4');
+        });
+        btn4.addEventListener('click', function(e) {
+            albumSongBuilder(Albums, 3, 'album4');
+        });
+
+    var btn5 = document.getElementById('btn5');
+        btn5.addEventListener('click', function() {
+            openModalWindow('album5');
+        });
+        btn5.addEventListener('click', function(e) {
+            albumSongBuilder(Albums, 4, 'album5');
+        });
+
+    function openModalWindow(albumClicked) {
+        var child = document.createElement('div');
+            child.className = "inside";
+        var text = document.createElement('div');
+            text.className = "inside-text";
+            text.id = albumClicked;
+        child.appendChild(text);
+
+        //create modal instance and pass in child elements
+            //can be whatever, styled however you want
+        var modal = new Modal(child, false);
+        modal.show(); //open the modal window
+    }
+
+})();
