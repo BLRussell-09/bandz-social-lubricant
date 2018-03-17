@@ -277,5 +277,6 @@ test4.addEventListener("click", function () {
 });
 
 
+// modal stuff --------------------------------------
 
-
+var modal = new VanillaModal();

@@ -23,10 +23,23 @@
 
   <div id='albumCards'></div>
 
+  <div class="modal">
+    <div class="modal-inner">
+      <a data-modal-close>Close</a>
+      <div class="modal-content"><p>dude</p></div>
+    </div>
+  </div>
+
+  <div id="modal-1" class="modal-hider">Modal 1 content</div>
+  <a style='display: block;' href="#modal-1" data-modal-open>Modal 1</a>
+
+
   <footer id="footer-section">
       <p>Copyright &copy;2018, Social Lubricant Ltd.<strong>1-800-LUV-LUBE</strong>
       </p>
   </footer>
+<script src="/node_modules/vanilla-modal/dist/index.js"></script>
+<script>var vanillaModal = new VanillaModal.default()</script>
 <script src='/main.js'></script>
 </body>
 </html>
