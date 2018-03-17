@@ -203,6 +203,11 @@ footer {
   background-color: rgba(38, 41, 44, 0.708);
 }
 
+/* Hidden audio */
+audio { 
+  display:none;
+
+
 footer p {
   clear: both;
 }
