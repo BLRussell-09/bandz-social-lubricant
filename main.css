@@ -4,6 +4,7 @@ body {
   padding: 0;
   background-image: url(http://globalmedicalco.com/photos/globalmedicalco/2/8604.jpg);
   position: relative;
+  height: 100vh;
 }
 
 /*Navbar style */
@@ -31,6 +32,64 @@ body {
 .nav a {
   text-decoration: none;
   display: inline-block;
+  color: rgb(190, 35, 48);
+}
+
+.nav a:visited {
+  color: firebrick;
+}
+/*                             */
+/* Merchandise page styles */
+
+div.merchCard {
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  float: left;
+  width: 30%;
+}
+
+div.merchCard img {
+  width: 100%;
+  height: auto;
+}
+
+#merchandise {
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+}
+
+.text {
+  background-color: rgb(197, 5, 5);
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.merchPhoto {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  transform: translate(75%, -250%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.merchCard:hover .middle {
+  opacity: 1;
+}
+
+.merchCard:hover .merchPhoto {
+  opacity: 0.3;
 }
 
 
@@ -125,6 +184,7 @@ body {
   padding: 0;
   margin-top: 1em;
   margin-left: 21em;
+  margin-bottom: 5em;
   overflow: auto;
   color: rgb(179, 170, 170);
   background-color: rgba(38, 41, 44, 0.708);
@@ -134,11 +194,49 @@ body {
 
 footer {
   position: absolute;
-  bottom: 0px;
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding: 1em;
   color: rgb(179, 170, 170);
   background-color: rgba(38, 41, 44, 0.708);
 }
+
 /* Hidden audio */
 audio { 
   display:none;
+
+
+footer p {
+  clear: both;
+}
+
+.twitter, .instagram, .fclass {
+  float: left;
+  padding-right: 1em;
+  text-decoration: none;
+  color: white;
+}
+
+.facebook, .myspace {
+  float: right;
+  padding-right: 1em;
+  text-decoration: none;
+  color: white;
+}
+
+.instagram:visited {
+  color: firebrick;
+}
+
+.myspace:visited {
+  color: firebrick;
+}
+
+.facebook:visited {
+  color: firebrick;
+}
+
+.twitter:visited {
+  color: firebrick;
 }
