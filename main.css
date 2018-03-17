@@ -1,8 +1,11 @@
 body {
+  background-color: rgb(38, 41, 44);
   margin: 0;
   padding: 0;
+  background-image: url(http://globalmedicalco.com/photos/globalmedicalco/2/8604.jpg);
 }
 
+/*Navbar style */
 .nav {
   background-color: slategrey;
   border-bottom: 1px solid black;
@@ -29,6 +32,7 @@ body {
   display: inline-block;
 }
 
+
 #member-info-container {
   position: relative;
   right: -500px;
@@ -54,4 +58,67 @@ body {
 }
 
 
+
+
+/* album page styles -----------------------------------------------------*/
+
+#albumCards {
+  display: flex;
+  flex-flow: row wrap;
+  height: 50em;
+  justify-content: space-evenly;
+}
+
+#albumCards article {
+  width: 40%;
+}
+
+#albumCards img{
+  width: 100%;
+}
+
+/* individual album page styles------------------------------------------------ */
+
+#album1, #album2, #album3, #album4, #album5 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#album1 div, #album2 div, #album3 div, #album4 div, #album5 div {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  text-align: center;
+  width: 100%;
+}
+
+#album1 p, #album2 p, #album3 p, #album4 p, #album5 p {
+  width: 40%;
+  color: rgb(179, 170, 170);
+  background-color: rgba(38, 41, 44, 0.708);
+}
+
+#album1 a, #album2 a, #album3 a, #album4 a, #album5 a {
+  color: rgb(179, 170, 170);
+  background-color: rgba(38, 41, 44, 0.708);
+}
+
+/* Home Page */
+#group-photo img {
+  display: block;
+  margin: 0 auto;
+}
+
+#historyText {
+  height: 12em;
+  width: 50%;
+  text-align: center;
+  padding: 0;
+  margin-top: 1em;
+  margin-left: 21em;
+  overflow: auto;
+  color: rgb(179, 170, 170);
+  background-color: rgba(38, 41, 44, 0.708);
+}
 
