@@ -32,8 +32,13 @@ body {
 .nav a {
   text-decoration: none;
   display: inline-block;
+  color: rgb(190, 35, 48);
 }
 
+.nav a:visited {
+  color: firebrick;
+}
+/*                             */
 /* Merchandise page styles */
 
 div.merchCard {
@@ -86,6 +91,7 @@ div.merchCard img {
 .merchCard:hover .merchPhoto {
   opacity: 0.3;
 }
+
 
 #member-info-container {
   position: relative;
@@ -178,6 +184,7 @@ div.merchCard img {
   padding: 0;
   margin-top: 1em;
   margin-left: 21em;
+  margin-bottom: 5em;
   overflow: auto;
   color: rgb(179, 170, 170);
   background-color: rgba(38, 41, 44, 0.708);
@@ -187,7 +194,44 @@ div.merchCard img {
 
 footer {
   position: absolute;
-  bottom: 0px;
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding: 1em;
   color: rgb(179, 170, 170);
   background-color: rgba(38, 41, 44, 0.708);
+}
+
+footer p {
+  clear: both;
+}
+
+.twitter, .instagram, .fclass {
+  float: left;
+  padding-right: 1em;
+  text-decoration: none;
+  color: white;
+}
+
+.facebook, .myspace {
+  float: right;
+  padding-right: 1em;
+  text-decoration: none;
+  color: white;
+}
+
+.instagram:visited {
+  color: firebrick;
+}
+
+.myspace:visited {
+  color: firebrick;
+}
+
+.facebook:visited {
+  color: firebrick;
+}
+
+.twitter:visited {
+  color: firebrick;
 }
