@@ -125,7 +125,7 @@ body {
   padding: 0;
   margin-top: 1em;
   margin-left: 21em;
-  margin-bottom: 3em;
+  margin-bottom: 5em;
   overflow: auto;
   color: rgb(179, 170, 170);
   background-color: rgba(38, 41, 44, 0.708);
@@ -141,4 +141,18 @@ footer {
   padding: 1em;
   color: rgb(179, 170, 170);
   background-color: rgba(38, 41, 44, 0.708);
+}
+
+footer p {
+  clear: both;
+}
+
+.twitter, .instagram, .fclass {
+  float: left;
+  padding-right: 1em;
+}
+
+.facebook, .myspace {
+  float: right;
+  padding-right: 1em;
 }
