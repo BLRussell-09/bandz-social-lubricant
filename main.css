@@ -150,9 +150,29 @@ footer p {
 .twitter, .instagram, .fclass {
   float: left;
   padding-right: 1em;
+  text-decoration: none;
+  color: white;
 }
 
 .facebook, .myspace {
   float: right;
   padding-right: 1em;
+  text-decoration: none;
+  color: white;
+}
+
+.instagram:visited {
+  color: firebrick;
+}
+
+.myspace:visited {
+  color: firebrick;
+}
+
+.facebook:visited {
+  color: firebrick;
+}
+
+.twitter:visited {
+  color: firebrick;
 }
