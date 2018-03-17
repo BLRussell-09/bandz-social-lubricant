@@ -246,6 +246,12 @@ footer p {
 }
 
 /* Break Points  */
+@media (max-width: 800px) {
+ #historyText {
+   margin: 2em auto;
+   margin-bottom: 6em;
+ }
+}
 
 /* Hidden audio */
 audio { 
