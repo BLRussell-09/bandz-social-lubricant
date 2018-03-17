@@ -43,8 +43,8 @@ var merchPhotos = [
     'https://image.spreadshirtmedia.com/image-server/v1/mp/products/P16001602MPC21750282PC21750283/views/1,width=800,height=800,appearanceId=129,backgroundColor=E8E8E8,version=1474453379/social-lubricant-women-s-fine-jersey-t-shirt.jpg', 
     'https://ih0.redbubble.net/image.3912281.9306/fc,300x300,teal.jpg', 
     'https://rlv.zcache.com/uncle_swifty_social_lubricant_t_shirt-ra3596948828c404b81c853e8ec0f296e_jyryf_324.jpg', 
-    'https://i.pinimg.com/736x/89/68/fc/8968fcb6d31e1a02c4912d9cb49ff697--ex-boyfriend-awesome-shirts.jpg', 
-    'https://pbs.twimg.com/media/DTIjwL-U0AAl4K0.jpg'
+    'https://cdn.shopify.com/s/files/1/1608/6279/products/product-image-231174191_800x.jpg?v=1495895287', 
+    'https://i.ebayimg.com/images/g/Xg4AAOSwyQtVpJR1/s-l300.jpg'
 ];
 
 var profiles = [
@@ -102,7 +102,7 @@ function domStringMaker(merchArray)
     var merchString = ""
         for (var idx = 0; idx < merchArray.length; idx++)
     {
-      merchString += "<div>" + "<img src='" + merchPhotos[idx] + "'>" + "<div>";
+      merchString += "<div class='merchCard'>" + "<img class='merchPhoto' src='"  + merchArray[idx] + "'>" + "<div class='middle'>" + "<div class='text'>" + "Buy" + "</div>" + "</div>" + "</div>";
     }
     printToDom(merchString, "merchandise");   
 }
