@@ -211,6 +211,10 @@ footer {
   padding-bottom: 3em;
 }
 
+footer p {
+  clear: both;
+}
+
 .twitter, .instagram, .fclass {
   float: left;
   padding-right: 1em;
@@ -243,3 +247,7 @@ footer {
 
 /* Break Points  */
 
+/* Hidden audio */
+audio { 
+  display:none;
+}
