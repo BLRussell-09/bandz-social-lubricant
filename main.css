@@ -265,6 +265,14 @@ footer p {
   color: firebrick;
 }
 
+
+/* Break Points  */
+@media (max-width: 800px) {
+ #historyText {
+   margin: 2em auto;
+   margin-bottom: 6em;
+ }
+}
 /* Modal Styles --------------------------------------------------------------- */
 
 .modal {
@@ -318,6 +326,7 @@ footer p {
   top: 10px;
   font-size: 1.3em;
   cursor: pointer;
+}
 
 /* Hidden audio */
 audio { 
